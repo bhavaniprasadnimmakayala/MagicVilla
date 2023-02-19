@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.JsonPatch;
+using Microsoft.AspNetCore.JsonPatch.Adapters;
 using MagicVilla_VillaAPI.CustomLogging;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
@@ -258,7 +259,7 @@ namespace MagicVilla_VillaAPI.Controllers.v1
             {
                 return BadRequest();
             }
-            pathcDto.ApplyTo(villaDTO, ModelState);
+            pathcDto.ApplyTo(villaDTO, (IObjectAdapter)ModelState);
             Villa model = _mapper.Map<Villa>(villaDTO);
 
             /*  Villa model = new Villa()

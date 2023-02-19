@@ -46,7 +46,7 @@ namespace MagicVilla_VillaAPI.Controllers.v2
         [HttpGet("GetString")]
         public IEnumerable<string> Get()
         {
-            return new string[] { "Jagadeesh", "Sandian" };
+            return new string[] { "Kesava", "Nimmakayala" };
         }
 
     }

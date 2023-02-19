@@ -3,7 +3,7 @@ using MagicVilla_VillaAPI.Models;
 using MagicVilla_VillaAPI.Models.DTO;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace MagicVilla_Villa2
+namespace MagicVilla_VillaAPI
 {
     public class MappingConfig : Profile
     {
@@ -14,8 +14,8 @@ namespace MagicVilla_Villa2
             CreateMap<Villa, VillaUpdateDTO>().ReverseMap();
 
             CreateMap<VillaNumber, VillaNumberDTO>().ReverseMap();
-            CreateMap<VillaNumber, VillaCreateNumberDTO>().ReverseMap();
-            CreateMap<VillaNumber, VillaUpdateNumberDTO>().ReverseMap();
+            CreateMap<VillaNumber, VillaNumberCreateDTO>().ReverseMap();
+            CreateMap<VillaNumber, VillaNumberUpdateDTO>().ReverseMap();
             CreateMap<ApplicationUser, UserDTO>().ReverseMap();
         }
     }
